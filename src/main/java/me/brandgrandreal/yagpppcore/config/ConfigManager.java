@@ -15,5 +15,8 @@ public class ConfigManager {
     public static String getDiscordLink() {
         return config.getString("discord-link");
     }
+    public static boolean getPMS() {
+        return config.getBoolean("passive-monster-spawning");
+    }
 
 }
