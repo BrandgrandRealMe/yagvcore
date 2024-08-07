@@ -1,0 +1,10 @@
+name: YAGPPPCore
+version: '1'
+main: me.brandgrandreal.yagpppcore.YAGPPPCore
+api-version: '1.21'
+authors: [ BrandGrandReal ]
+description: YAGPPP Core plugin
+
+commands:
+  discord:
+    description: Get our discord link! :)
