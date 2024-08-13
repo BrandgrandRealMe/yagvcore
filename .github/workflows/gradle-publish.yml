@@ -66,8 +66,9 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v3
+    - name: Upload Artifact To Release
+      uses: Shopify/upload-to-release@v2.0.0
       with:
-          name: yagvcore.jar
-          path: build/libs/*.jar
+        name: yagvcore.jar
+        path: build/libs/*.jar
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
