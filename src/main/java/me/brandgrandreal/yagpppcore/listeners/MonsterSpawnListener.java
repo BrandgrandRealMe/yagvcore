@@ -1,6 +1,7 @@
 package me.brandgrandreal.yagpppcore.listeners;
 
 import me.brandgrandreal.yagpppcore.config.ConfigManager;
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Monster;
@@ -13,12 +14,11 @@ import java.util.Arrays;
 public class MonsterSpawnListener implements Listener {
     @EventHandler
     public void noNaturalMonsterSpawning(CreatureSpawnEvent event) {
-        if (ConfigManager.getPMS()) {
+        if (!ConfigManager.getPMS()) {
             Entity entity = event.getEntity();
-            String[] ValidSpawnReasons = {"BUILD_WITHER", "COMMAND", "DISPENSE_EGG", "EGG", "SPAWNER", "SPAWNER_EGG", "TRIAL_SPAWNER"};
-
-            if (entity instanceof Monster && Arrays.asList(ValidSpawnReasons).contains(event.getSpawnReason()))
+            if (entity instanceof Monster && event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.NATURAL) {
                 event.setCancelled(true);
+            }
         }
     }
 }
