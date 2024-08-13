@@ -1,5 +1,5 @@
 name: YAGPPPCore
-version: '1'
+version: '{ver}'
 main: me.brandgrandreal.yagpppcore.YAGPPPCore
 api-version: '1.21'
 authors: [ BrandGrandReal ]
