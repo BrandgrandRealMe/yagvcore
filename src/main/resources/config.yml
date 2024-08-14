@@ -1,2 +1,7 @@
 discord-link: "discord.gg/CHANGE_THIS"
 passive-monster-spawning: false
+rules:
+  - name: Rule A
+    description: A great rule
+  - name: Rule B
+    description: Another great rule

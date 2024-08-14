@@ -1,6 +1,7 @@
 package me.brandgrandreal.yagpppcore;
 
 import me.brandgrandreal.yagpppcore.commands.DiscordCommand;
+import me.brandgrandreal.yagpppcore.commands.RulesCommand;
 import me.brandgrandreal.yagpppcore.config.ConfigManager;
 import me.brandgrandreal.yagpppcore.listeners.MonsterSpawnListener;
 import org.bukkit.Bukkit;
@@ -14,6 +15,7 @@ public final class YAGPPPCore extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new MonsterSpawnListener(), this);
 
         getCommand("discord").setExecutor(new DiscordCommand());
+        getCommand("rules").setExecutor(new RulesCommand());
     }
 
     @Override

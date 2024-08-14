@@ -7,4 +7,6 @@ description: YAGPPP Core plugin
 
 commands:
   discord:
-    description: Get our discord link! :)
+    description: Get the servers discord server.
+  rules:
+    description: Read the servers rules.
