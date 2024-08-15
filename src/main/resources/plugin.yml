@@ -10,3 +10,5 @@ commands:
     description: Get the servers discord server.
   rules:
     description: Read the servers rules.
+  website:
+    description: Get the servers website.

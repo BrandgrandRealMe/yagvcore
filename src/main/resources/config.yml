@@ -1,4 +1,5 @@
 discord-link: "discord.gg/CHANGE_THIS"
+website-link: "https://example.com"
 passive-monster-spawning: false
 rules:
   - name: Rule A

@@ -9,7 +9,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class DiscordCommand implements CommandExecutor {
+public class WebsiteCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
@@ -20,9 +20,9 @@ public class DiscordCommand implements CommandExecutor {
         }
 
         player.sendMessage(" ");
-        String url = ConfigManager.getDiscordLink();
+        String url = ConfigManager.getWebsiteLink();
         String discordMessage = ChatColor.translateAlternateColorCodes
-                ('&', "&b&lClick on me to join our discord! :)");
+                ('&', "&b&lClick on me to visit our website! :)");
         ChatUtil.sendClickableDiscordMsg(player, discordMessage, url);
 
         player.sendMessage(" ");

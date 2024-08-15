@@ -7,9 +7,9 @@ import org.bukkit.entity.Player;
 
 public class ChatUtil {
 
-    public static void sendClickableDiscordMsg(Player player, String message) {
+    public static void sendClickableDiscordMsg(Player player, String message, String url) {
         TextComponent textComponent = new TextComponent(message);
-        textComponent.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, ConfigManager.getDiscordLink()));
+        textComponent.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, url));
 
         player.spigot().sendMessage(textComponent);
     }
